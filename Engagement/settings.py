@@ -57,7 +57,7 @@ MIDDLEWARE = [
 # Combined Frontend Origins (Development & Production)
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://frontend-gamma-drab-35.vercel.app/",  # ← put your real URL here
+    "https://frontend-gamma-drab-35.vercel.app",  # ← put your real URL here
 ]
 
 REST_FRAMEWORK = {
