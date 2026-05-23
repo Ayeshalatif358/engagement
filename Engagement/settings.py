@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     
     # Local apps
     'event',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,7 @@ MIDDLEWARE = [
 # Combined Frontend Origins (Development & Production)
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://your-vercel-app.vercel.app",  # Replace with your actual live Vercel URL
+    "https://frontend-gamma-drab-35.vercel.app/",  # ← put your real URL here
 ]
 
 REST_FRAMEWORK = {
@@ -137,15 +138,12 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Modern storage configuration layout for Django 5.x and WhiteNoise
 STORAGES = {
     "default": {
-        "BACKEND": "django.db.backends.staticfiles.StaticFilesStorage",
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
     },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
 
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
