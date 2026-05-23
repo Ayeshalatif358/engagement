@@ -1,1 +1,1 @@
-web: gunicorn Engagement.wsgi
+web: gunicorn yourprojectname.wsgi
