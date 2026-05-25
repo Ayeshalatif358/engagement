@@ -89,15 +89,9 @@ WSGI_APPLICATION = 'Engagement.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
-# Replace the string below with your actual connection string from Neon
-DATABASE_URL = "postgresql://neondb_owner:npg_vuTW9fI0eLhB@ep-autumn-wildflower-a70kzsb8-pooler.ap-southeast-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
-
 DATABASES = {
-    'default': dj_database_url.config(
-        default=DATABASE_URL,
-        conn_max_age=600,
-        ssl_require=True
+    'default': dj_database_url.parse(
+        'postgresql://neondb_owner:npg_PXDI2raYw8Bo@ep-falling-lake-aqwvyhgm-pooler.c-8.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
     )
 }
 
